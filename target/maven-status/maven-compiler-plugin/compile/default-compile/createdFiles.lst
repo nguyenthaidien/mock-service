@@ -1,5 +1,3 @@
-com\amrut\prabhu\product\RealmRoleConverter.class
-com\amrut\prabhu\product\ResourceServerConfig.class
-com\amrut\prabhu\product\Controller.class
-com\amrut\prabhu\product\RolesLoggingAspect.class
-com\amrut\prabhu\product\ProductServiceApplication.class
+com\example\mock_service\DemoController.class
+com\example\mock_service\MockServiceApplication.class
+com\example\mock_service\MessageRequest.class

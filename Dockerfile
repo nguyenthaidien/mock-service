@@ -24,6 +24,6 @@ RUN sh -c 'touch /app.jar'
 
 # entrypoint to the image on run
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
-EXPOSE 9100
-EXPOSE 8761
+EXPOSE 5000
+
 
