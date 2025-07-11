@@ -1,5 +1,2 @@
-com\amrut\prabhu\product\RealmRoleConverter.class
-com\amrut\prabhu\product\ResourceServerConfig.class
-com\amrut\prabhu\product\Controller.class
-com\amrut\prabhu\product\RolesLoggingAspect.class
-com\amrut\prabhu\product\ProductServiceApplication.class
+com\example\demo\Controller.class
+com\example\demo\MockServerApplication.class
