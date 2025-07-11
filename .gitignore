@@ -1,0 +1,7 @@
+logs/application-debug.log
+logs/application-debug.log
+*.gz
+logs/application-debug.log
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+logs/application-debug.log
+/target/classes
