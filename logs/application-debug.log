@@ -505,3 +505,82 @@ Identify and stop the process that's listening on port 5000 or configure this ap
 2025-07-15 16:34:26,500 DEBUG [SpringApplicationShutdownHook] org.springframework.web.client.RestTemplate : Response 200 OK
 2025-07-15 16:34:26,500 INFO  [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient : DiscoveryClient_MOCK-SERVICE/product-service:mock-service:5000 - deregister  status: 200
 2025-07-15 16:34:26,500 INFO  [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient : Completed shut down of DiscoveryClient
+2025-07-15 16:36:49,997 INFO  [restartedMain] com.example.mock_service.MockServiceApplication : Starting MockServiceApplication using Java 17.0.9 with PID 35124 (C:\PHATTRIEN_DCMS\mock-service\target\classes started by diennt in C:\PHATTRIEN_DCMS\mock-service)
+2025-07-15 16:36:50,000 INFO  [restartedMain] com.example.mock_service.MockServiceApplication : No active profile set, falling back to 1 default profile: "default"
+2025-07-15 16:36:50,045 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-15 16:36:50,045 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-15 16:36:52,005 INFO  [restartedMain] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=97b06940-5103-35f5-a6a7-40476ce5f736
+2025-07-15 16:36:52,791 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port 5000 (http)
+2025-07-15 16:36:52,810 INFO  [restartedMain] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2025-07-15 16:36:52,812 INFO  [restartedMain] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-15 16:36:52,887 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2025-07-15 16:36:52,889 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2842 ms
+2025-07-15 16:36:53,184 DEBUG [restartedMain] org.springframework.web.filter.ServerHttpObservationFilter : Filter 'webMvcObservationFilter' configured for use
+2025-07-15 16:36:53,185 DEBUG [restartedMain] org.springframework.web.filter.CommonsRequestLoggingFilter : Filter 'requestLoggingFilter' configured for use
+2025-07-15 16:36:53,382 DEBUG [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2025-07-15 16:36:53,477 DEBUG [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-15 16:36:53,635 DEBUG [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-15 16:36:53,706 DEBUG [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-15 16:36:54,244 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2025-07-15 16:36:54,414 INFO  [restartedMain] org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-15 16:36:54,478 WARN  [restartedMain] org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-15 16:36:54,486 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver : Exposing 3 endpoints beneath base path '/actuator'
+2025-07-15 16:36:54,556 INFO  [restartedMain] org.springframework.cloud.netflix.eureka.InstanceInfoFactory : Setting initial instance status as: STARTING
+2025-07-15 16:36:54,584 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Initializing Eureka in region us-east-1
+2025-07-15 16:36:54,594 INFO  [restartedMain] com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver : Resolving eureka endpoints via configuration
+2025-07-15 16:36:54,614 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Disable delta property : false
+2025-07-15 16:36:54,614 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Single vip registry refresh property : null
+2025-07-15 16:36:54,614 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Force full registry fetch : false
+2025-07-15 16:36:54,615 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Application is null : false
+2025-07-15 16:36:54,619 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Registered Applications size is zero : true
+2025-07-15 16:36:54,622 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Application version is -1: true
+2025-07-15 16:36:54,623 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Getting all instance registry info from the eureka server
+2025-07-15 16:36:54,849 DEBUG [restartedMain] org.springframework.web.client.RestTemplate : HTTP GET http://10.82.14.80:8761/eureka/apps/
+2025-07-15 16:36:54,974 DEBUG [restartedMain] org.springframework.web.client.RestTemplate : Accept=[application/json, application/*+json]
+2025-07-15 16:36:55,034 DEBUG [restartedMain] org.springframework.web.client.RestTemplate : Response 200 OK
+2025-07-15 16:36:55,037 DEBUG [restartedMain] org.springframework.web.client.RestTemplate : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-07-15 16:36:55,071 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : The response status is 200
+2025-07-15 16:36:55,074 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Starting heartbeat executor: renew interval is: 30
+2025-07-15 16:36:55,076 INFO  [restartedMain] com.netflix.discovery.InstanceInfoReplicator : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-07-15 16:36:55,080 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Discovery Client initialized at timestamp 1752572215079 with initial instances count: 5
+2025-07-15 16:36:55,083 INFO  [restartedMain] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Registering application MOCK-SERVICE with eureka with status UP
+2025-07-15 16:36:55,084 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Saw local status change event StatusChangeEvent [timestamp=1752572215084, current=UP, previous=STARTING]
+2025-07-15 16:36:55,086 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient : DiscoveryClient_MOCK-SERVICE/product-service:mock-service:5000: registering service...
+2025-07-15 16:36:55,092 DEBUG [DiscoveryClient-InstanceInfoReplicator-%d] org.springframework.web.client.RestTemplate : HTTP POST http://10.82.14.80:8761/eureka/apps/MOCK-SERVICE
+2025-07-15 16:36:55,093 INFO  [restartedMain] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry : Unregistering application MOCK-SERVICE with eureka with status DOWN
+2025-07-15 16:36:55,093 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Saw local status change event StatusChangeEvent [timestamp=1752572215093, current=DOWN, previous=UP]
+2025-07-15 16:36:55,095 WARN  [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-07-15 16:36:55,095 DEBUG [DiscoveryClient-InstanceInfoReplicator-%d] org.springframework.web.client.RestTemplate : Accept=[application/json, application/*+json]
+2025-07-15 16:36:55,100 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Shutting down DiscoveryClient ...
+2025-07-15 16:36:55,113 DEBUG [DiscoveryClient-InstanceInfoReplicator-%d] org.springframework.web.client.RestTemplate : Writing [InstanceInfo [instanceId = product-service:mock-service:5000, appName = MOCK-SERVICE, hostName = product-service, status = DOWN, ipAddr = 10.82.14.80, port = 5000, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@33a582b5] as "application/json"
+2025-07-15 16:36:55,147 DEBUG [DiscoveryClient-InstanceInfoReplicator-%d] org.springframework.web.client.RestTemplate : Response 204 NO_CONTENT
+2025-07-15 16:36:55,148 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient : DiscoveryClient_MOCK-SERVICE/product-service:mock-service:5000 - registration status: 204
+2025-07-15 16:36:55,149 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient : DiscoveryClient_MOCK-SERVICE/product-service:mock-service:5000: registering service...
+2025-07-15 16:36:55,150 DEBUG [DiscoveryClient-InstanceInfoReplicator-%d] org.springframework.web.client.RestTemplate : HTTP POST http://10.82.14.80:8761/eureka/apps/MOCK-SERVICE
+2025-07-15 16:36:55,151 DEBUG [DiscoveryClient-InstanceInfoReplicator-%d] org.springframework.web.client.RestTemplate : Accept=[application/json, application/*+json]
+2025-07-15 16:36:55,151 DEBUG [DiscoveryClient-InstanceInfoReplicator-%d] org.springframework.web.client.RestTemplate : Writing [InstanceInfo [instanceId = product-service:mock-service:5000, appName = MOCK-SERVICE, hostName = product-service, status = DOWN, ipAddr = 10.82.14.80, port = 5000, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@33a582b5] as "application/json"
+2025-07-15 16:36:55,174 DEBUG [DiscoveryClient-InstanceInfoReplicator-%d] org.springframework.web.client.RestTemplate : Response 204 NO_CONTENT
+2025-07-15 16:36:55,175 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient : DiscoveryClient_MOCK-SERVICE/product-service:mock-service:5000 - registration status: 204
+2025-07-15 16:36:55,175 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Unregistering ...
+2025-07-15 16:36:55,176 DEBUG [restartedMain] org.springframework.web.client.RestTemplate : HTTP DELETE http://10.82.14.80:8761/eureka/apps/MOCK-SERVICE/product-service:mock-service:5000
+2025-07-15 16:36:55,178 DEBUG [restartedMain] org.springframework.web.client.RestTemplate : Accept=[application/json, application/*+json]
+2025-07-15 16:36:55,190 DEBUG [restartedMain] org.springframework.web.client.RestTemplate : Response 200 OK
+2025-07-15 16:36:55,190 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : DiscoveryClient_MOCK-SERVICE/product-service:mock-service:5000 - deregister  status: 200
+2025-07-15 16:36:55,191 INFO  [restartedMain] com.netflix.discovery.DiscoveryClient : Completed shut down of DiscoveryClient
+2025-07-15 16:36:55,213 INFO  [restartedMain] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-15 16:36:55,242 ERROR [restartedMain] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 5000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 5000 or configure this application to listen on another port.
+
