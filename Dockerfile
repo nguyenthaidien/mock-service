@@ -1,29 +1,19 @@
-# Docker file for the Read Service
-#
-# Version 0.0.1
+# Use Node.js base image
+FROM node:18
 
-#jdk image
-FROM eclipse-temurin:17
+# Set working directory
+WORKDIR /app
 
-# install
-# label for the image
-LABEL Description="mock-service" Version="0.0.1"
+# Copy package.json and install dependencies
+COPY package.json ./
+RUN npm install
 
-# the version of the archive
-ARG VERSION=0.0.1
+# Copy your database file and server setup
+COPY db.json ./
+COPY server.js ./
 
-# mount the temp volume
+# Expose port for the server
+EXPOSE 3000
 
-VOLUME /tmp
-
-# Add the service as app.jar
-ADD target/mock-service-${VERSION}-SNAPSHOT.jar app.jar
-
-# touch the archive for timestamp
-RUN sh -c 'touch /app.jar'
-
-# entrypoint to the image on run
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
-EXPOSE 9190
-
-
+# Start the server
+CMD ["node", "server.js"]
