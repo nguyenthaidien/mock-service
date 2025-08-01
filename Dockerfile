@@ -1,29 +1,20 @@
-# Docker file for the Read Service
-#
-# Version 0.0.1
 
-#jdk image
-FROM eclipse-temurin:17
+FROM node:18
 
-# install
-# label for the image
-LABEL Description="mock-service" Version="0.0.1"
+WORKDIR /app
 
-# the version of the archive
-ARG VERSION=0.0.1
+# Install global tools
+RUN npm install -g json-server nodemon
 
-# mount the temp volume
-
-VOLUME /tmp
-
-# Add the service as app.jar
-ADD target/mock-service-${VERSION}-SNAPSHOT.jar app.jar
-
-# touch the archive for timestamp
-RUN sh -c 'touch /app.jar'
-
-# entrypoint to the image on run
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
-EXPOSE 9190
+# Install dependencies for JWT + JWKS verification
+COPY package*.json ./
 
 
+# Add authentication middleware
+RUN npm install jsonwebtoken jwks-rsa
+COPY auth-middleware.js ./
+COPY db.json ./
+
+EXPOSE 3000
+#CMD ["nodemon", "--watch", "db.json", "--watch", "auth-middleware.js", "--exec", "json-server", "--", "--watch", "db.json", "--middlewares", "auth-middleware.js", "--host", "0.0.0.0", "--port", "3000"]
+CMD ["nodemon", "--watch", "db.json", "--watch", "auth-middleware.js", "--exec", "json-server", "--", "--watch", "db.json", "--host", "0.0.0.0", "--port", "3000"]
