@@ -9,7 +9,7 @@ COPY package.json ./
 RUN npm install
 
 # Copy your database file and server setup
-COPY db.json ./
+COPY /mock/db.json /app/mock/
 COPY server.js ./
 
 # Expose port for the server
