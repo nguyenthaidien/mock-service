@@ -25,7 +25,7 @@ app.use(jwt({
 }));
 
 // Setup json-server + auth
-const router = jsonServer.router('/app/mock/db.json');
+const router = jsonServer.router('/app/dcms-config-repo/db.json');
 app.use(jsonServer.defaults());
 app.use(auth);
 app.use('/mock',router);
